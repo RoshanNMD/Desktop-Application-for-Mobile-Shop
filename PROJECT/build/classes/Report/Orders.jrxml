@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="1000" pageHeight="1000" columnWidth="960" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d236e053-190b-4099-aa9e-1e15af429463">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="New Dataset 1" uuid="faa82652-067d-4ce4-a3ba-abd3e01edd33">
+		<queryString language="SQL">
+			<![CDATA[SELECT * FROM orders]]>
+		</queryString>
+		<field name="OrderID" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Discription" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Name" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="NIC" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="ContactNO" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="OrderDate" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="OrderDueDate" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="ItemID" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Quantity" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="OrderItem" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="ItemDetails" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Discount" class="java.lang.Double">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="UnitPrice" class="java.lang.Double">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="TotalPrice" class="java.lang.Double">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<group name="OrderID">
+			<groupExpression><![CDATA[$F{OrderID}]]></groupExpression>
+		</group>
+	</subDataset>
+	<subDataset name="dataset1" uuid="e2d50ebf-6384-44d7-b672-7ecff8f3559e"/>
+	<queryString>
+		<![CDATA[select * from orders]]>
+	</queryString>
+	<field name="OrderID" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Discription" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NIC" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ContactNO" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="OrderDate" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="OrderDueDate" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ItemID" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Quantity" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="OrderItem" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ItemDetails" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Discount" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="UnitPrice" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TotalPrice" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="100" splitType="Stretch">
+			<staticText>
+				<reportElement x="198" y="29" width="177" height="20" uuid="bd99dc52-4975-4f3d-bc14-3902d25803db"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[LIST OF ORDERS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="41" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="177" splitType="Stretch">
+			<staticText>
+				<reportElement x="109" y="75" width="42" height="20" uuid="5bddcbce-c502-4fc3-941a-562bac3a477b"/>
+				<text><![CDATA[OrderID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="223" y="75" width="39" height="20" uuid="f8e3ef35-41bd-40b4-846f-050db46851d4"/>
+				<text><![CDATA[ContactNO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="336" y="75" width="39" height="20" uuid="5f69ccf1-8dd4-433b-a428-52badc564378"/>
+				<text><![CDATA[NIC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="442" y="75" width="40" height="20" uuid="8fcd415f-6438-4c3f-9c91-3527635a0dd5"/>
+				<text><![CDATA[Quantity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="559" y="75" width="55" height="20" uuid="34a01723-7308-44f6-8ab3-1d93ad3aab8e"/>
+				<text><![CDATA[OrderDate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="679" y="75" width="78" height="20" uuid="dd09b004-1435-43fe-aeed-e1d691f965e4"/>
+				<text><![CDATA[OrderDueDate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="797" y="75" width="60" height="20" uuid="8347cf5b-6d93-41dc-904f-92f39d48ec9b"/>
+				<text><![CDATA[TotalPrice]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="109" y="44" width="71" height="20" uuid="01b533ed-f234-4e26-bf02-21f590815b5b"/>
+				<textFieldExpression><![CDATA[$F{OrderID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="223" y="44" width="71" height="20" uuid="999fd776-300f-4b29-8cb9-f31d0274d704"/>
+				<textFieldExpression><![CDATA[$F{ContactNO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="336" y="44" width="39" height="20" uuid="c9ebbecc-fb05-4932-9904-cd828844ec8e"/>
+				<textFieldExpression><![CDATA[$F{NIC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="418" y="44" width="64" height="20" uuid="93016f9f-e580-4e3a-a2d7-dbc34355fb11"/>
+				<textFieldExpression><![CDATA[$F{Quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="559" y="44" width="71" height="20" uuid="9e71de37-6ffe-4e2d-9142-1f175880f700"/>
+				<textFieldExpression><![CDATA[$F{OrderDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="679" y="44" width="88" height="20" uuid="9be10bd4-24ee-4fef-bf6b-ce4e6b420530"/>
+				<textFieldExpression><![CDATA[$F{OrderDueDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="797" y="44" width="94" height="20" uuid="02d5c8ac-7877-4408-a940-53b2bd80b88b"/>
+				<textFieldExpression><![CDATA[$F{TotalPrice}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="600" splitType="Stretch"/>
+	</summary>
+</jasperReport>

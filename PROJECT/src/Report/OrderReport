@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ff655afa-f6ff-4eb1-9e2d-24413cc80e2f">
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     orders.`OrderID` AS orders_OrderID,
+     orders.`Discription` AS orders_Discription,
+     orders.`Name` AS orders_Name,
+     orders.`NIC` AS orders_NIC,
+     orders.`ContactNO` AS orders_ContactNO,
+     orders.`OrderDate` AS orders_OrderDate,
+     orders.`OrderDueDate` AS orders_OrderDueDate,
+     orders.`ItemID` AS orders_ItemID,
+     orders.`Quantity` AS orders_Quantity,
+     orders.`OrderItem` AS orders_OrderItem,
+     orders.`ItemDetails` AS orders_ItemDetails,
+     orders.`Discount` AS orders_Discount,
+     orders.`UnitPrice` AS orders_UnitPrice,
+     orders.`TotalPrice` AS orders_TotalPrice
+FROM
+     `orders` orders]]>
+	</queryString>
+	<field name="orders_OrderID" class="java.lang.Integer"/>
+	<field name="orders_Discription" class="java.lang.String"/>
+	<field name="orders_Name" class="java.lang.String"/>
+	<field name="orders_NIC" class="java.lang.String"/>
+	<field name="orders_ContactNO" class="java.lang.Integer"/>
+	<field name="orders_OrderDate" class="java.lang.String"/>
+	<field name="orders_OrderDueDate" class="java.lang.String"/>
+	<field name="orders_ItemID" class="java.lang.Integer"/>
+	<field name="orders_Quantity" class="java.lang.Integer"/>
+	<field name="orders_OrderItem" class="java.lang.String"/>
+	<field name="orders_ItemDetails" class="java.lang.String"/>
+	<field name="orders_Discount" class="java.lang.Double"/>
+	<field name="orders_UnitPrice" class="java.lang.Double"/>
+	<field name="orders_TotalPrice" class="java.lang.Double"/>
+	<group name="orders_OrderID">
+		<groupExpression><![CDATA[$F{orders_OrderID}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
